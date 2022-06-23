@@ -1,0 +1,18 @@
+<h3>Edit <%= @publications.title %></h3>
+<%= form_for @publications, url: admin_publication_path(@publications) do |f| %>
+  <div class="form_group">
+    <label>Title</label>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+  <div class="form_group">
+    <label>File URL</label>
+    <%= f.text_field :file_url, class: 'form-control' %>
+  </div>
+  <div class="form_group">
+    <%= f.submit "Update Publication", class: 'btn btn-primary' %>
+  </div>
+<% end %>
